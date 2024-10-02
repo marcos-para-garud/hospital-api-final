@@ -17,6 +17,11 @@ app.use("/doctors", require("./routes/doctor"));
 app.use("/patients", require("./routes/patient"));
 app.use("/reports", require("./routes/report"));
 
+
+app.get("/" , (req , res)=>{
+   res.send("welcome to hopital api")
+})
+
 app.listen(8000, (error) => {
    if (error) {
       console.log("error in the port");
